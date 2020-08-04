@@ -10,14 +10,14 @@
 override: false
 
 # Console reminder if new version released.
-reminder: false
+reminder: true
 
 # Allow to cache content generation. Introduced in NexT v6.0.0.
 cache:
   enable: true
 
 # Remove unnecessary files after hexo generate.
-minify: false
+minify: true
 
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
@@ -40,10 +40,10 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
-  safari_pinned_tab: /images/logo.svg
+  small: /images/favicon.jpg
+  medium: /images/favicon.jpg
+  apple_touch_icon: /images/favicon.jpg
+  safari_pinned_tab: /images/favicon.jpg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
@@ -116,11 +116,11 @@ darkmode: false
 # When running the site in a subdirectory (e.g. yoursite.com/blog), remove the leading slash from link value (/archives -> archives).
 # External url should start with http:// or https://
 menu:
-  home: / || fa fa-home
-  #about: /about/ || fa fa-user
-  #tags: /tags/ || fa fa-tags
-  #categories: /categories/ || fa fa-th
-  archives: /archives/ || fa fa-archive
+  home: / || home
+  #about: /about/ || user
+  tags: /tags/ || tags
+  categories: /categories/ || th
+  archives: /archives/ || archive
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
@@ -177,8 +177,8 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  #GitHub: https://github.com/yourname || fab fa-github
-  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+  GitHub: https://github.com/zxkjack123 || github
+  E-Mail: mailto:zxkjack123@163.com || envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -222,7 +222,7 @@ chat:
   enable: false
   #service: chatra
   #service: tidio
-  icon: fa fa-comment # Icon name in Font Awesome, set false to disable icon.
+  icon: comment # Icon name in Font Awesome, set false to disable icon.
   text: Chat # Button text, change it as you wish.
 
 
@@ -389,8 +389,8 @@ bookmark:
 
 # `Follow me on GitHub` banner in the top-right corner.
 github_banner:
-  enable: false
-  permalink: https://github.com/yourname
+  enable: true
+  permalink: https://github.com/zxkjack123
   title: Follow me on GitHub
 
 
@@ -463,7 +463,7 @@ exturl: false
 
 # Google Webmaster tools verification.
 # See: https://www.google.com/webmasters
-google_site_verification:
+google_site_verification: "JHEEEyylS4g-v_hhF-L1a1mgp9itS98C5jDANE-2PGs"
 
 # Bing Webmaster tools verification.
 # See: https://www.bing.com/webmaster
@@ -497,12 +497,15 @@ math:
   # That is it only render those page which has `mathjax: true` in Front-matter.
   # If you set it to false, it will load mathjax / katex srcipt EVERY PAGE.
   per_page: true
+  engine: mathjax
 
   # hexo-renderer-pandoc (or hexo-renderer-kramed) required for full MathJax support.
   mathjax:
-    enable: false
+    enable: true
+    cdn: //cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
     # See: https://mhchem.github.io/MathJax-mhchem/
     mhchem: false
+
 
   # hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin) required for full Katex support.
   katex:
@@ -581,8 +584,8 @@ comments:
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: ture
+  shortname: https-zxkjack123-github-io
   count: true
   #post_meta_order: 0
 
@@ -670,7 +673,7 @@ add_this_id:
 
 # Google Analytics
 google_analytics:
-  tracking_id: # <app_id>
+  tracking_id: UA-113129784-1 # <app_id>
   # By default, NexT will load an external gtag.js script on your site.
   # If you only need the pageview feature, set the following option to true to get a better performance.
   only_pageview: false
